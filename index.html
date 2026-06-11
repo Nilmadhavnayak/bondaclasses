@@ -81,14 +81,38 @@ body{font-family:Segoe UI,sans-serif;background:#fafafa}
 </div>
 
 <div id="registrationForm" class="form-section mt-5">
-<h3 id="courseTitle" class="text-brand"></h3>
-<p class="text-muted">Please fill in your details and our team will contact you shortly.</p>
-<form><div class="row">
-<div class="col-md-6 mb-3"><input class="form-control" placeholder="Full Name"></div>
-<div class="col-md-6 mb-3"><input class="form-control" placeholder="Mobile Number"></div>
-<div class="col-md-6 mb-3"><input class="form-control" placeholder="Email"></div>
-<div class="col-md-6 mb-3"><input class="form-control" placeholder="City"></div>
-</div><button class="btn btn-danger">Register Now</button></form>
+    <h3 id="courseTitle" class="text-brand"></h3>
+    <p class="text-muted">
+        Please fill in your details and our team will contact you shortly.
+    </p>
+
+    <form id="registerForm">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <input type="text" name="name" class="form-control"
+                    placeholder="Full Name" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <input type="tel" name="mobile" class="form-control"
+                    placeholder="Mobile Number" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <input type="email" name="email" class="form-control"
+                    placeholder="Email" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <input type="text" name="city" class="form-control"
+                    placeholder="City" required>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-danger">
+            Register Now
+        </button>
+    </form>
 </div>
 </section>
 
@@ -136,6 +160,34 @@ document.getElementById('courseTitle').innerHTML='Register for '+course;
 document.getElementById('registrationForm').scrollIntoView({behavior:'smooth'});
 }
 </script>
+
+<script>
+document.getElementById("registerForm")
+.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const form = this;
+
+    fetch("https://script.google.com/macros/s/AKfycbxv5SpyXY5c6ymKiDRjR4xD9e6DlQwek6gWLHjcdFedSERGTIpGOv3grGmjoX7J6hdx/exec", {
+        method: "POST",
+        body: new FormData(form)
+    })
+    .then(response => response.json())
+    .then(data => {
+
+        alert("Registration Successful!");
+
+        form.reset();
+    })
+    .catch(error => {
+        console.error(error);
+        alert("Something went wrong. Please try again.");
+    });
+
+});
+</script>
+  
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

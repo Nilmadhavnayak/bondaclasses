@@ -3,288 +3,139 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>South Indian Food Training Center</title>
-
+<title>Cucubumber Training Center</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
 <style>
-
-body{
-    background:#fafafa;
-    font-family:'Segoe UI',sans-serif;
-}
-
-.hero{
-    height:100vh;
-    background:url('https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=1600&q=80') center/cover;
-    position:relative;
-}
-
-.hero::before{
-    content:'';
-    position:absolute;
-    inset:0;
-    background:rgba(0,0,0,.55);
-}
-
-.hero-content{
-    position:relative;
-    z-index:1;
-    color:#fff;
-    text-align:center;
-    top:50%;
-    transform:translateY(-50%);
-}
-
-.course-card{
-    border:none;
-    overflow:hidden;
-    border-radius:20px;
-    transition:.4s;
-    cursor:pointer;
-}
-
-.course-card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 15px 40px rgba(0,0,0,.2);
-}
-
-.course-card img{
-    height:250px;
-    object-fit:cover;
-}
-
-.form-section{
-    display:none;
-    background:#fff;
-    padding:30px;
-    border-radius:20px;
-    margin-top:40px;
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
-}
-
-.stats{
-    background:#ff5722;
-    color:#fff;
-    padding:60px 0;
-}
-
-.stat{
-    text-align:center;
-}
-
-.whatsapp-btn{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    z-index:1000;
-}
+html{scroll-behavior:smooth}
+body{font-family:Segoe UI,sans-serif;background:#fafafa}
+.navbar-brand,.text-brand{color:#D3212C!important;font-weight:800}
+.hero{min-height:100vh;background:linear-gradient(135deg,#fff7f5,#fff,#fff5f5);display:flex;align-items:center;overflow:hidden}
+.hero-title{font-size:4rem;font-weight:800}
+.highlight{color:#D3212C}
+.hero-image{width:100%;border-radius:24px;box-shadow:0 20px 60px rgba(0,0,0,.12)}
+.hero-badge{display:inline-block;background:#ffe7e8;color:#D3212C;padding:10px 18px;border-radius:30px}
+.hero-stats{display:flex;gap:30px;margin:25px 0}
+.course-card{background:#fff;border-radius:24px;overflow:hidden;border:1px solid #eee;cursor:pointer;transition:.3s;height:100%}
+.course-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,.08)}
+.course-card img{height:240px;width:100%;object-fit:cover}
+.course-content{padding:24px}
+.course-tag{background:#f3f4f6;padding:6px 12px;border-radius:20px;font-size:13px}
+.price{font-size:1.8rem;font-weight:800;color:#D3212C}
+.course-footer{display:flex;justify-content:space-between;align-items:center}
+.arrow{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#f3f4f6}
+.form-section{display:none;background:#fff;padding:30px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+.stats{background:#D3212C;color:#fff}
+.alumni-card{background:#fff;border-radius:24px;overflow:hidden;border:1px solid #eee;height:100%;text-align:center}
+.alumni-image{height:260px;width:100%;object-fit:cover}
+.package{color:#D3212C;font-weight:800;font-size:1.6rem;padding-bottom:20px}
+.gallery img{height:220px;object-fit:cover;width:100%;border-radius:14px}
+.footer-section{background:#111827;color:#fff;padding:60px 0 20px}
+.whatsapp-btn{position:fixed;right:20px;bottom:20px}
+@media(max-width:768px){.hero-title{font-size:2.6rem}.hero-stats{flex-wrap:wrap}}
 </style>
 </head>
 <body>
 
-<!-- HERO -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+<div class="container">
+<a class="navbar-brand" href="#">Cucubumber Training Center</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+<li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="#placement">Placements</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
 <section class="hero">
-    <div class="container hero-content">
-        <h1 class="display-3 fw-bold">
-            Learn South Indian Snacks Like a Pro
-        </h1>
-
-        <p class="lead mt-3">
-            Mysore Bonda • Thatte Idli • Masala Dosa
-        </p>
-
-        <a href="#courses" class="btn btn-warning btn-lg mt-3">
-            Explore Courses
-        </a>
-    </div>
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-6">
+<div class="hero-badge">🔥 Karnataka's Premier Food Training Institute</div>
+<h1 class="hero-title mt-3">Become a <span class="highlight">South Indian</span> Food Expert</h1>
+<p class="lead">Learn Mysore Bonda, Thatte Idli and Masala Dosa through practical training.</p>
+<div class="hero-stats">
+<div><h3>500+</h3><small>Students</small></div>
+<div><h3>95%</h3><small>Success</small></div>
+<div><h3>15+</h3><small>Years</small></div>
+</div>
+<a href="#courses" class="btn btn-danger btn-lg">Explore Courses</a>
+<a href="#placement" class="btn btn-outline-dark btn-lg">View Alumni</a>
+</div>
+<div class="col-lg-6">
+<img class="hero-image" src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1200&q=80">
+</div>
+</div>
+</div>
 </section>
 
-<!-- COURSES -->
 <section id="courses" class="container py-5">
+<h2 class="text-center mb-5">Our Popular Courses</h2>
+<div class="row g-4">
+<div class="col-lg-4"><div class="course-card" onclick="showForm('Mysore Bonda Training')"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=1000&q=80"><div class="course-content"><span class="course-tag">2 Days Training</span><h3 class="mt-3">Mysore Bonda</h3><p>Live practical sessions.</p><div class="course-footer"><div><small>Starting Fee</small><div class="price">₹3,499</div></div><div class="arrow">→</div></div></div></div></div>
+<div class="col-lg-4"><div class="course-card" onclick="showForm('Thatte Idli Training')"><img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=1000&q=80"><div class="course-content"><span class="course-tag">1 Day Workshop</span><h3 class="mt-3">Thatte Idli</h3><p>Master soft idli preparation.</p><div class="course-footer"><div><small>Starting Fee</small><div class="price">₹2,999</div></div><div class="arrow">→</div></div></div></div></div>
+<div class="col-lg-4"><div class="course-card" onclick="showForm('Masala Dosa Training')"><img src="https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&w=1000&q=80"><div class="course-content"><span class="course-tag">3 Days Training</span><h3 class="mt-3">Masala Dosa</h3><p>Hotel-style dosa preparation.</p><div class="course-footer"><div><small>Starting Fee</small><div class="price">₹4,499</div></div><div class="arrow">→</div></div></div></div></div>
+</div>
 
-    <h2 class="text-center mb-5">
-        Our Popular Courses
-    </h2>
-
-    <div class="row g-4">
-
-        <div class="col-md-4">
-            <div class="card course-card"
-                 onclick="showForm('Mysore Bonda')">
-
-                <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=1000&q=80">
-
-                <div class="card-body">
-                    <h4>Mysore Bonda Training</h4>
-                    <p>
-                        Learn crispy golden bondas from scratch.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card course-card"
-                 onclick="showForm('Thatte Idli')">
-
-                <img src="https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=1000&q=80">
-
-                <div class="card-body">
-                    <h4>Thatte Idli Training</h4>
-                    <p>
-                        Master Karnataka's famous soft idlis.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card course-card"
-                 onclick="showForm('Masala Dosa')">
-
-                <img src="https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&w=1000&q=80">
-
-                <div class="card-body">
-                    <h4>Masala Dosa Training</h4>
-                    <p>
-                        Learn hotel-style crispy dosas.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
-    <!-- FORM -->
-
-    <div id="registrationForm" class="form-section">
-
-        <h3 id="courseTitle"></h3>
-
-        <form>
-
-            <div class="row">
-
-                <div class="col-md-6 mb-3">
-                    <label>Name</label>
-                    <input type="text" class="form-control">
-                </div>
-
-                <div class="col-md-6 mb-3">
-                    <label>Mobile Number</label>
-                    <input type="text" class="form-control">
-                </div>
-
-                <div class="col-md-6 mb-3">
-                    <label>Email</label>
-                    <input type="email" class="form-control">
-                </div>
-
-                <div class="col-md-6 mb-3">
-                    <label>City</label>
-                    <input type="text" class="form-control">
-                </div>
-
-            </div>
-
-            <button class="btn btn-danger btn-lg">
-                Register Now
-            </button>
-
-        </form>
-
-    </div>
-
+<div id="registrationForm" class="form-section mt-5">
+<h3 id="courseTitle" class="text-brand"></h3>
+<p class="text-muted">Please fill in your details and our team will contact you shortly.</p>
+<form><div class="row">
+<div class="col-md-6 mb-3"><input class="form-control" placeholder="Full Name"></div>
+<div class="col-md-6 mb-3"><input class="form-control" placeholder="Mobile Number"></div>
+<div class="col-md-6 mb-3"><input class="form-control" placeholder="Email"></div>
+<div class="col-md-6 mb-3"><input class="form-control" placeholder="City"></div>
+</div><button class="btn btn-danger">Register Now</button></form>
+</div>
 </section>
 
-<!-- STATS -->
+<section class="stats py-5"><div class="container text-center"><div class="row"><div class="col-md-4"><h2>500+</h2><p>Students Trained</p></div><div class="col-md-4"><h2>15+</h2><p>Years Experience</p></div><div class="col-md-4"><h2>95%</h2><p>Success Rate</p></div></div></div></section>
 
-<section class="stats">
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-md-4 stat">
-                <h1>500+</h1>
-                <h5>Students Trained</h5>
-            </div>
-
-            <div class="col-md-4 stat">
-                <h1>15+</h1>
-                <h5>Years Experience</h5>
-            </div>
-
-            <div class="col-md-4 stat">
-                <h1>95%</h1>
-                <h5>Success Rate</h5>
-            </div>
-
-        </div>
-
-    </div>
-
+<section id="gallery" class="container py-5 gallery">
+<h2 class="text-center mb-4">Training Gallery</h2>
+<div class="row g-3">
+<div class="col-md-3"><img src="https://images.unsplash.com/photo-1512058564366-18510be2db19"></div>
+<div class="col-md-3"><img src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40"></div>
+<div class="col-md-3"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641"></div>
+<div class="col-md-3"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950"></div>
+</div>
 </section>
 
-<!-- GALLERY -->
-
-<section class="container py-5">
-
-    <h2 class="text-center mb-4">
-        Training Gallery
-    </h2>
-
-    <div class="row g-3">
-
-        <div class="col-md-3">
-            <img class="img-fluid rounded"
-                 src="https://images.unsplash.com/photo-1512058564366-18510be2db19">
-        </div>
-
-        <div class="col-md-3">
-            <img class="img-fluid rounded"
-                 src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40">
-        </div>
-
-        <div class="col-md-3">
-            <img class="img-fluid rounded"
-                 src="https://images.unsplash.com/photo-1565557623262-b51c2513a641">
-        </div>
-
-        <div class="col-md-3">
-            <img class="img-fluid rounded"
-                 src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
-        </div>
-
-    </div>
-
+<section id="placement" class="py-5 bg-light">
+<div class="container">
+<h2 class="text-center mb-5">Our Star Alumni</h2>
+<div class="row g-4">
+<div class="col-lg-3"><div class="alumni-card"><img class="alumni-image" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80"><h5 class="mt-3">Rakesh Kumar</h5><p>Rameshwaram Cafe</p><div class="package">₹4.8 LPA</div></div></div>
+<div class="col-lg-3"><div class="alumni-card"><img class="alumni-image" src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=500&q=80"><h5 class="mt-3">Shashank P</h5><p>Mysuru Cafe</p><div class="package">₹4.2 LPA</div></div></div>
+<div class="col-lg-3"><div class="alumni-card"><img class="alumni-image" src="https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&w=500&q=80"><h5 class="mt-3">Arun Prasad</h5><p>Thala Dosa Center</p><div class="package">₹3.6 LPA</div></div></div>
+<div class="col-lg-3"><div class="alumni-card"><img class="alumni-image" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=500&q=80"><h5 class="mt-3">Vijay P</h5><p>99 Dosa Center</p><div class="package">₹3.9 LPA</div></div></div>
+</div>
+</div>
 </section>
 
-<a href="#" class="btn btn-success btn-lg whatsapp-btn">
-    WhatsApp Us
-</a>
+<footer class="footer-section">
+<div class="container">
+<div class="row">
+<div class="col-lg-4"><h3>Cucubumber Training Center</h3><p>Learn practical skills and start your culinary career.</p></div>
+<div class="col-lg-4"><h5>Courses</h5><p>Mysore Bonda<br>Thatte Idli<br>Masala Dosa</p></div>
+<div class="col-lg-4"><h5>Contact</h5><p>+91 98765 43210<br>info@cucubumbertraining.com<br>Bengaluru</p></div>
+</div>
+<hr><div class="text-center">© 2026 Cucubumber Training Center</div>
+</div>
+</footer>
+
+<a href="https://wa.me/919876543210" target="_blank" class="btn btn-success whatsapp-btn">WhatsApp Us</a>
 
 <script>
-
 function showForm(course){
-
-    document.getElementById("registrationForm").style.display="block";
-
-    document.getElementById("courseTitle").innerHTML =
-    "Register for " + course;
-
-    document.getElementById("registrationForm")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
-
+document.getElementById('registrationForm').style.display='block';
+document.getElementById('courseTitle').innerHTML='Register for '+course;
+document.getElementById('registrationForm').scrollIntoView({behavior:'smooth'});
 }
-
 </script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
